@@ -41,9 +41,11 @@ default_font: Default font tuple, e.g., ("Arial", 12) (default: "Arial", 12).
 bg, fg: Background and foreground color for the text editor (default: white for background, black for foreground). 
 
 
-## Adding to a tkinter window Example : 
+## Adding to a tkinter window Example :
 ![textedit_init](https://github.com/user-attachments/assets/3feac7c9-9434-4e37-b3b7-2d36bd6cd942) 
 
+## import 
+![Screenshot 2025-01-20 194505](https://github.com/user-attachments/assets/3c13cd0c-828a-4dae-af24-914420244a84)
 
 
 # License 
