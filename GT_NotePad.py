@@ -25,7 +25,7 @@ class GTextEditor:
         file_menu = tk.Menu(menu_bar, tearoff=0)
         file_menu.add_command(label="New Tab", command=self._new_tab)
         file_menu.add_command(label="Close Tab", command=self._close_tab)
-        file_menu.add_command(label="Save", command=self._save_text)
+        file_menu.add_command(label="Save", command=self._save_as_text)
         file_menu.add_command(label="Load", command=self._load_text)
         file_menu.add_command(label="Clear", command=self._clear_text)
         file_menu.add_separator()
@@ -223,8 +223,12 @@ class GTextEditor:
     def _clear_text(self):
         self._get_current_text_area().delete("1.0", "end")
 
-    def _save_text(self):
-        file_path = askstring("Save", "Enter file name:", parent=self.notebook)
+    def _save_as_text(self):
+        file_path = asksaveasfilename(
+            defaultextension=".txt",
+            filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")],
+            title="Save As"
+        )
         if file_path:
             with open(file_path, "w") as file:
                 file.write(self._get_current_text_area().get("1.0", "end-1c"))
@@ -245,3 +249,4 @@ class GTextEditor:
 
     def _show_about(self):
         messagebox.showinfo("About", "This is an basic text editor with tabs, find & replace, and more.")
+
