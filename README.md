@@ -5,13 +5,23 @@ is a basic text editor with tabbed interface, customizable fonts, text styling o
 
 ## Features
 Tabbed Interface: Create, close, and switch between multiple tabs for easy management of documents.
+
 Font Customization: Change font family, size, and color of text.
+
 Text Styling: Apply text styles such as bold, italic, underline, and strike-through.
+
 Text Alignment: Align text to the left, center, or right.
+
 Find & Replace: Perform find and replace operations on the content of the current tab.
+
 File Operations: Save text to a file, load text from a file, and clear the text area.
+
 Undo/Redo: Support for undo and redo actions to manage text changes.
+
 Background Color: Customize the background color of the editor area.
+
+And if you want you can highlight specifc Text or sentence and only change the hilghted text 
+
 
 ## Menu Options:
 File: New Tab, Close Tab, Save, Load, Clear, Exit.
