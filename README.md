@@ -4,21 +4,21 @@
 is a basic text editor with tabbed interface, customizable fonts, text styling options, and file handling capabilities. It provides a rich set of features such as font and color customization, find and replace, undo/redo, and more. This text editor is built using Python's Tkinter module for graphical user interface and is designed for simple and efficient text editing.
 
 ## Features
-Tabbed Interface: Create, close, and switch between multiple tabs for easy management of documents.
+- Tabbed Interface: Create, close, and switch between multiple tabs for easy management of documents.
 
-Font Customization: Change font family, size, and color of text.
+- Font Customization: Change font family, size, and color of text.
 
-Text Styling: Apply text styles such as bold, italic, underline, and strike-through.
+- Text Styling: Apply text styles such as bold, italic, underline, and strike-through.
 
-Text Alignment: Align text to the left, center, or right.
+- Text Alignment: Align text to the left, center, or right.
 
-Find & Replace: Perform find and replace operations on the content of the current tab.
+- Find & Replace: Perform find and replace operations on the content of the current tab.
 
-File Operations: Save text to a file, load text from a file, and clear the text area.
+- File Operations: Save text to a file, load text from a file, and clear the text area.
 
-Undo/Redo: Support for undo and redo actions to manage text changes.
+- Undo/Redo: Support for undo and redo actions to manage text changes.
 
-Background Color: Customize the background color of the editor area.
+- Background Color: Customize the background color of the editor area.
 
 And if you want you can highlight specifc Text or sentence and only change the hilghted text 
 
@@ -36,13 +36,13 @@ Save and Load: You can save the current text to a file and load text from a file
 
 
 ## Requirements
-Python 3.x
-tkinter (included with Python standard library)
-tkinter.ttk for advanced widgets
-tkinter.colorchooser for color picking
+- Python 3.x
+- tkinter (included with Python standard library)
+- tkinter.ttk for advanced widgets
+- tkinter.colorchooser for color picking
 
 
-## main.py is the file you can use to run the code or make your own main file to run the widget 
+
 
 ## Usage
 Creating the Editor: The GTextEditor class can be initialized with the following optional parameters:
@@ -52,14 +52,13 @@ wd, ht: Width and height of the window (default: 600, 400).
 default_font: Default font tuple, e.g., ("Arial", 12) (default: "Arial", 12).
 bg, fg: Background and foreground color for the text editor (default: white for background, black for foreground). 
  
-
 ## Adding to a tkinter window Example :
 ![textedit_init](https://github.com/user-attachments/assets/3feac7c9-9434-4e37-b3b7-2d36bd6cd942) 
 
 ## import 
 ![Screenshot 2025-01-20 194505](https://github.com/user-attachments/assets/3c13cd0c-828a-4dae-af24-914420244a84)
 
-
+# main.py is the file you can use to run the code or make your own main file to run the widget 
 
 # License 
 This is open-source and can be used and modified freely
