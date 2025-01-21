@@ -34,13 +34,15 @@ Text Customization: You can change the text font, size, and color using the tool
 
 Save and Load: You can save the current text to a file and load text from a file into the active tab.
 
-## main.py is the file you can use to run the code or make your own main file to run the widget 
 
 ## Requirements
 Python 3.x
 tkinter (included with Python standard library)
 tkinter.ttk for advanced widgets
 tkinter.colorchooser for color picking
+
+
+## main.py is the file you can use to run the code or make your own main file to run the widget 
 
 ## Usage
 Creating the Editor: The GTextEditor class can be initialized with the following optional parameters:
@@ -49,8 +51,7 @@ x, y: Coordinates for the editor window (default: 0, 0).
 wd, ht: Width and height of the window (default: 600, 400).
 default_font: Default font tuple, e.g., ("Arial", 12) (default: "Arial", 12).
 bg, fg: Background and foreground color for the text editor (default: white for background, black for foreground). 
-
-
+ 
 
 ## Adding to a tkinter window Example :
 ![textedit_init](https://github.com/user-attachments/assets/3feac7c9-9434-4e37-b3b7-2d36bd6cd942) 
