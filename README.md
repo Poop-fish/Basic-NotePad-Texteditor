@@ -43,7 +43,6 @@ Save and Load: You can save the current text to a file and load text from a file
 
 
 
-
 ## Usage
 
 Creating the Editor: The GTextEditor class can be initialized with the following optional parameters:
@@ -63,7 +62,7 @@ Creating the Editor: The GTextEditor class can be initialized with the following
 ## import 
 ![Screenshot 2025-01-20 194505](https://github.com/user-attachments/assets/3c13cd0c-828a-4dae-af24-914420244a84)
 
-You can Apply my Custom style, all u need to do is add the root for it like this ![Screenshot 2025-01-21 191602](https://github.com/user-attachments/assets/8f963b1c-6550-487f-8335-a173bf266a9d)
+You can Apply my Custom style, all u need to do is add the root like this ![Screenshot 2025-01-21 191602](https://github.com/user-attachments/assets/8f963b1c-6550-487f-8335-a173bf266a9d)
 
 full code make, sure to add the Custom Style import at the top : 
 ![Screenshot 2025-01-21 191756](https://github.com/user-attachments/assets/4dac34dc-3ea2-4414-be73-f14effc66cc6)
