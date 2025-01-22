@@ -50,7 +50,7 @@ Creating the Editor: The GTextEditor class can be initialized with the following
 
 - x, y: Coordinates for the editor window (default: 0, 0). this realy dosnt matter because u cant change cords 
 
-- wd, ht: Width and height of the window (default: 600, 400).
+- wd, ht: Width and height of the window (default: 600, 400). same with this they kinda just there and dont do anything 
 
 -default_font: Default font tuple, e.g., ("Arial", 12) (default: "Arial", 12).
 
