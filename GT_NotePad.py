@@ -1,5 +1,6 @@
 from imports import *
-
+from GT_Style import *
+#! ----------------------- CORE MANAGEMENT--------------------------------------------------- 
 class GTextEditor:
     def __init__(self, x=0, y=0, wd=600, ht=400, default_font=("Arial", 12), bg="white", fg="black"):
         self.x = x
@@ -15,60 +16,67 @@ class GTextEditor:
         self.tabs = []  
 
     def _build(self, root):
-        self._create_menu_bar(root)
-        self._create_toolbar(root)
-        self._create_tabbed_text_area(root)
+        self.create_menu_bar(root)
+        self.create_toolbar(root)
+        self.create_tabbed_text_area(root)
 
-    def _create_menu_bar(self, root):
-        menu_bar = tk.Menu(root)
+    def create_menu_bar(self, root):
 
-        file_menu = tk.Menu(menu_bar, tearoff=0)
-        file_menu.add_command(label="New Tab", command=self._new_tab)
-        file_menu.add_command(label="Close Tab", command=self._close_tab)
-        file_menu.add_command(label="Save", command=self._save_as_text)
-        file_menu.add_command(label="Load", command=self._load_text)
-        file_menu.add_command(label="Clear", command=self._clear_text)
+        menu_bar = tk.Menu(root, bg="lightgray", fg="black", font=("Arial", 10))
+
+        file_menu = tk.Menu(menu_bar, tearoff=0, bg="Gray", fg="black", font=("Arial", 12))
+        file_menu.add_command(label="New Tab", command=self._new_tab, foreground="Black", font=("Arial", 12, "bold"))
+        file_menu.add_command(label="Rename Tab", command=self._rename_tab, foreground="Black", font=("Arial", 12, "bold"))
+        file_menu.add_command(label="Close Tab", command=self._close_tab, foreground="Black", font=("Arial", 12, "bold"))
+        file_menu.add_command(label="Save", command=self._save_as_text, foreground="Black", font=("Arial", 12, "bold"))
+        file_menu.add_command(label="Load", command=self._load_text, foreground="Black", font=("Arial", 12, "bold"))
+        file_menu.add_command(label="Clear", command=self._clear_text, foreground="Black", font=("Arial", 12, "bold"))
         file_menu.add_separator()
-        file_menu.add_command(label="Exit", command=root.quit)
+        file_menu.add_command(label="Exit", command=root.quit, foreground="red", font=("Arial", 12, "bold"))
+        
         menu_bar.add_cascade(label="File", menu=file_menu)
 
-        edit_menu = tk.Menu(menu_bar, tearoff=0)
-        edit_menu.add_command(label="Undo", command=self._undo)
-        edit_menu.add_command(label="Redo", command=self._redo)
+        edit_menu = tk.Menu(menu_bar, tearoff=0, bg="Gray", fg="black", font=("Arial", 12))
+        edit_menu.add_command(label="Undo", command=self._undo, foreground="Black", font=("Arial", 12))
+        edit_menu.add_command(label="Redo", command=self._redo, foreground="Black", font=("Arial", 12))
         edit_menu.add_separator()
-        edit_menu.add_command(label="Find and Replace", command=self._find_and_replace)
+        edit_menu.add_command(label="Find and Replace", command=self._find_and_replace, foreground="Black", font=("Arial", 12))
         edit_menu.add_separator()
-        edit_menu.add_command(label="Bold", command=self._toggle_bold)
-        edit_menu.add_command(label="Italic", command=self._toggle_italic)
-        edit_menu.add_command(label="Underline", command=self._toggle_underline)
-        edit_menu.add_command(label="Strike", command=self._toggle_strike)
+        edit_menu.add_command(label="Bold", command=self._toggle_bold, foreground="Black", font=("Arial", 12))
+        edit_menu.add_command(label="Italic", command=self._toggle_italic, foreground="Black", font=("Arial", 12))
+        edit_menu.add_command(label="Underline", command=self._toggle_underline, foreground="Black", font=("Arial", 12))
+        edit_menu.add_command(label="Strike", command=self._toggle_strike, foreground="Black", font=("Arial", 12))
         edit_menu.add_separator()
-        edit_menu.add_command(label="Left Align", command=self._align_left)
-        edit_menu.add_command(label="Center Align", command=self._align_center)
-        edit_menu.add_command(label="Right Align", command=self._align_right)
+        edit_menu.add_command(label="Left Align", command=self._align_left, foreground="Black", font=("Arial", 12))
+        edit_menu.add_command(label="Center Align", command=self._align_center, foreground="Black", font=("Arial", 12))
+        edit_menu.add_command(label="Right Align", command=self._align_right, foreground="Black", font=("Arial", 12))
 
         menu_bar.add_cascade(label="Edit", menu=edit_menu)
 
-        help_menu = tk.Menu(menu_bar, tearoff=0)
-        help_menu.add_command(label="About", command=self._show_about)
+        help_menu = tk.Menu(menu_bar, tearoff=0, bg="gray", fg="black", font=("Arial", 12))
+        help_menu.add_command(label="About", command=self._show_about, foreground="black", font=("Arial", 12, "italic"))
         menu_bar.add_cascade(label="About", menu=help_menu)
 
         root.config(menu=menu_bar)
 
-    def _create_toolbar(self, root):
+    def create_toolbar(self, root):
         toolbar = tk.Frame(root)
         toolbar.pack(side=tk.TOP, fill=tk.X)
-
+        
+        customize_menu = Apply_GTstyle(root)
+        
         font_dropdown = ttk.OptionMenu(toolbar, self.font_var, *families(), command=self._update_font)
         font_dropdown.pack(side=tk.LEFT, padx=5)
-
-        size_dropdown = ttk.OptionMenu(toolbar, self.size_var, *[str(i) for i in range(8, 72)], command=self._update_font)
+        customize_menu(font_dropdown)
+        
+        size_dropdown = ttk.OptionMenu(toolbar, self.size_var, *[str(i) for i in range(5, 72)], command=self._update_font)
         size_dropdown.pack(side=tk.LEFT, padx=5)
+        customize_menu(size_dropdown)
 
         color_button = ttk.Button(toolbar, text="Text Color", command=self._choose_color)
         color_button.pack(side=tk.LEFT, padx=5)
 
-        bg_button = ttk.Button(toolbar, text="Background Color", command=lambda: self._update_bg_fg('bg'))
+        bg_button = ttk.Button(toolbar, text="Tab Color", command=lambda: self._update_bg_fg('bg'))
         bg_button.pack(side=tk.LEFT, padx=5)
 
     def _update_bg_fg(self, mode):
@@ -79,10 +87,14 @@ class GTextEditor:
             if mode == 'bg':
                 current_text_area.configure(bg=color)
 
-    def _create_tabbed_text_area(self, root):
+    def create_tabbed_text_area(self, root):
         self.notebook = ttk.Notebook(root)
         self.notebook.pack(fill=tk.BOTH, expand=True)
         self._new_tab()
+#! -----------------------END OF CORE MANAGEMENT--------------------------------------------------- 
+
+
+#! -----------------------TAB MANAGEMENT----------------------------------------------------------- 
 
     def _new_tab(self):
         frame = tk.Frame(self.notebook, bg=self.bg)
@@ -95,6 +107,11 @@ class GTextEditor:
 
         self.notebook.add(frame, text=f"Tab {len(self.tabs) + 1}")
         self.tabs.append(text_area)
+    def _rename_tab(self):
+        current_tab = self.notebook.index(self.notebook.select())
+        new_name = simpledialog.askstring("Rename Tab", "Enter new tab name:")
+        if new_name:
+            self.notebook.tab(current_tab, text=new_name)
 
     def _close_tab(self):
         current_tab = self.notebook.index(self.notebook.select())
@@ -108,6 +125,9 @@ class GTextEditor:
         current_tab = self.notebook.index(self.notebook.select())
         return self.tabs[current_tab]
 
+#! ----------------------- END OF TAB MANAGEMENT ---------------------------------------------------  
+
+#! ----------------------- TEXT\FONT EDITOR MANAGEMENT ---------------------------------------------
     def _find_and_replace(self):
         find_replace_win = tk.Toplevel()
         find_replace_win.title("Find and Replace")
@@ -222,7 +242,9 @@ class GTextEditor:
 
     def _clear_text(self):
         self._get_current_text_area().delete("1.0", "end")
+#! ----------------------- END OF TEXT\FONT EDITOR MANAGEMENT --------------------------------------------- 
 
+#! ----------------------- FILE OPERATIONS MANAGEMENT -----------------------------------------------------
     def _save_as_text(self):
         file_path = asksaveasfilename(
             defaultextension=".txt",
@@ -246,7 +268,8 @@ class GTextEditor:
                     self._get_current_text_area().insert("1.0", file.read())
             except Exception as e:
                 messagebox.showerror("Error", f"An error occurred while loading the file: {e}")
-
+    
     def _show_about(self):
         messagebox.showinfo("About", "This is an basic text editor with tabs, find & replace, and more.")
 
+#! -----------------------END OF FILE OPERATIONS MANAGEMENT -----------------------------------------------------
