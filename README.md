@@ -65,7 +65,8 @@ Creating the Editor: The GTextEditor class can be initialized with the following
 
 You can Apply my Custom style, all u need to do is add the root for it like this ![Screenshot 2025-01-21 191602](https://github.com/user-attachments/assets/8f963b1c-6550-487f-8335-a173bf266a9d)
 
-full code : 
+full code make, sure to add the Custom Style import at the top : 
+-  from GT_style import Apply_GTstyle
 ![Screenshot 2025-01-21 191819](https://github.com/user-attachments/assets/c3c475c1-2cd8-48f4-ae59-58fd68103e6a)
 
 
