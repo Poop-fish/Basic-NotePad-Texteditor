@@ -41,7 +41,7 @@ Save and Load: You can save the current text to a file and load text from a file
 - tkinter.ttk for advanced widgets
 - tkinter.colorchooser for color picking
 
-## Tested And Maded With: 
+## Tested And Made With: 
 - Python
 - Windows 
 i have not tested on mac or linux.
