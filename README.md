@@ -48,7 +48,7 @@ Save and Load: You can save the current text to a file and load text from a file
 
 Creating the Editor: The GTextEditor class can be initialized with the following optional parameters:
 
-- x, y: Coordinates for the editor window (default: 0, 0). this realy dosnt matter because u can change cords 
+- x, y: Coordinates for the editor window (default: 0, 0). this realy dosnt matter because u cant change cords 
 
 - wd, ht: Width and height of the window (default: 600, 400).
 
