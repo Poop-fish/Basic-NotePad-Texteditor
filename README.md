@@ -69,6 +69,7 @@ Font Picker: choose a font style you like
 - tkinter (included with Python standard library)
 - tkinter.ttk for advanced widgets
 - tkinter.colorchooser for color picking
+- pip install pyspellchecker (for the spell checking)
 
 ## Tested And Made With: 
 
