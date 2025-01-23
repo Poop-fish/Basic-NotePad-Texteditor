@@ -43,7 +43,7 @@ And if you want you can highlight specifc Text or sentence and only change the h
 | **Ctrl + R**        | Align text to the right          |
 
 
-## Menu Options:
+## Menu \ ToolBar Options:
 File: New Tab, Close Tab, Save, Load, Clear, Exit.
 
 Edit: Undo, Redo, Find and Replace, Bold, Italic, Underline, Strike, Align (Left, Center, Right).
@@ -56,6 +56,13 @@ Save and Load: You can save the current text to a file and load text from a file
 
 Spell Check: You can check all the texts for mis spleed words and if it finds and just right click and it will bring up options to choose from 
 
+inset Date & time: This will add the current date and time to your tab in text fromat 
+
+Bullet Points \ Number List: Highlght and click One of them add the list format 
+
+Font Size: You can ajust and choose the size of the font 
+
+Font Picker: choose a font style you like 
 
 ## Requirements
 - Python 3.x
