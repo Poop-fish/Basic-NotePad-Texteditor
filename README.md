@@ -20,7 +20,7 @@ is a basic text editor with tabbed interface, customizable fonts, text styling o
 
 - Background Color: Customize the background color of the editor area.
 
-- Spell Check: You can check all the texts for mis spleed words and if it finds and just right click and it will bring up options to choose from 
+- Spell Check: You can check all the texts for mis spelled words and if it finds one , just right click and it will bring up options to choose from 
 
 And if you want you can highlight specifc Text or sentence and only change the hilghted text 
  
