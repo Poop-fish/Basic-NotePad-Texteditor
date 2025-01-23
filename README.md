@@ -67,16 +67,13 @@ Creating the Editor: The GTextEditor class can be initialized with the following
 
 - bg, fg: Background and foreground color for the text editor (default: white for background, black for foreground). 
 
- 
-## Adding to a tkinter window Example :
-![textedit_init](https://github.com/user-attachments/assets/3feac7c9-9434-4e37-b3b7-2d36bd6cd942) 
 
 ## import 
 ![Screenshot 2025-01-20 194505](https://github.com/user-attachments/assets/3c13cd0c-828a-4dae-af24-914420244a84)
 
 You can Apply my Custom style, all u need to do is add the root like this ![Screenshot 2025-01-21 191602](https://github.com/user-attachments/assets/8f963b1c-6550-487f-8335-a173bf266a9d)
 
-## Full Example code: 
+## Full Example code of Adding widget to tkinter window: 
 ![Screenshot 2025-01-23 002032](https://github.com/user-attachments/assets/9a89834a-ec1e-4528-b051-4fc848b8cd76)
 
 
