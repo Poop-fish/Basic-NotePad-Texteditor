@@ -23,6 +23,24 @@ is a basic text editor with tabbed interface, customizable fonts, text styling o
 - Spell Check: You can check all the texts for mis spleed words and if it finds and just right click and it will bring up options to choose from 
 
 And if you want you can highlight specifc Text or sentence and only change the hilghted text 
+ 
+### Keybindings
+
+| Key Combination     | Action                             |
+|---------------------|------------------------------------|
+| **Ctrl + N**        | Open a new tab                   |
+| **Ctrl + S**        | Save as text                     |
+| **Ctrl + O**        | Load text                        |
+| **Ctrl + Q**        | Quit application                 |
+| **Ctrl + Z**        | Undo last action                 |
+| **Ctrl + Y**        | Redo last undone action          |
+| **Ctrl + F**        | Find and replace text            |
+| **Ctrl + B**        | Toggle bold formatting           |
+| **Ctrl + I**        | Toggle italic formatting         |
+| **Ctrl + U**        | Toggle underline formatting      |
+| **Ctrl + L**        | Align text to the left           |
+| **Ctrl + E**        | Center-align text                |
+| **Ctrl + R**        | Align text to the right          |
 
 
 ## Menu Options:
