@@ -23,7 +23,7 @@ is a basic text editor with tabbed interface, customizable fonts, text styling o
 
 - Spell Check: You can check all the texts for mis spelled words and if it finds one , just right click and it will bring up options to choose from 
 
-## Speach to text : Use prebuilt in commands :
+## Speach to text : prebuilt commands :
 Bold - Applies bold formatting to the selected text.
 
 Italic - Toggles italic formatting for the selected text (assumes _toggle_italic method implementation).
