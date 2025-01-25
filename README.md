@@ -145,6 +145,7 @@ You can Apply my Custom style, all u need to do is add the root like this ![Scre
 directory should look like this:
 
 MainFolder/
+
 ├── Assets/          
 ├── Example.py          
 ├── GT_NotePad.py         
