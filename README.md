@@ -56,7 +56,7 @@ you should be able to use all basic window commands like
 - dir
 - time /t
 - date /t
-and so on
+and so on , the terminal is a littte buggy and will crash if u tyoe the commands wrong( i need to add better error handling for it)
 
 if u want to customize background and text of termnial just use these commands 
 - set bgcolor blue
