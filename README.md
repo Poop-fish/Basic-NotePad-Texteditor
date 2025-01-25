@@ -23,6 +23,8 @@ is a basic text editor with tabbed interface, customizable fonts, text styling o
 
 - Spell Check: You can check all the texts for mis spelled words and if it finds one , just right click and it will bring up options to choose from 
 
+- drawing window: you can open up and draw in a window , right click to bring up context menu if you want to change color , clear and/or save the drawing ypu made
+
 ## Speach to text : prebuilt commands :
 Bold - Applies bold formatting to the selected text(select the text fist then so the command , it will use the commond on every letter if you dont 
 
