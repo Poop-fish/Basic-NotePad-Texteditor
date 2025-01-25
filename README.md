@@ -1,4 +1,4 @@
-## New stuff Add > Speach to text , Code execution(Python Only) , clock widget , calculator , drawing pad and a terminal 
+### New stuff Added👉 Speach to text , Code execution(Python Only) , clock widget , calculator , drawing pad and a terminal 
 
 ## GTextEditor :
 is a basic text editor with tabbed interface, customizable fonts, text styling options, and file handling capabilities. It provides a rich set of features such as font and color customization, find and replace, undo/redo, and more. This text editor is built using Python's Tkinter module for graphical user interface and is designed for simple and efficient text editing.
