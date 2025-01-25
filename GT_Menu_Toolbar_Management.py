@@ -73,7 +73,7 @@ class UIMenuToolbarManagement:
     def _show_keybinds_panel(self):
         keybind_window = tk.Toplevel()
         keybind_window.title("Key Binds")
-        keybind_window.geometry("450x800")
+        keybind_window.geometry("450x820")
         keybind_window.resizable(False, False)
         keybind_window.configure(bg="#2b2b2b")
 
