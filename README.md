@@ -1,4 +1,4 @@
-# GTextEditor
+## New stuff Add > Speach to text , Code execution(Python Only) , clock widget , calculator , drawing pad and a terminal 
 
 ## GTextEditor :
 is a basic text editor with tabbed interface, customizable fonts, text styling options, and file handling capabilities. It provides a rich set of features such as font and color customization, find and replace, undo/redo, and more. This text editor is built using Python's Tkinter module for graphical user interface and is designed for simple and efficient text editing.
@@ -8,7 +8,7 @@ is a basic text editor with tabbed interface, customizable fonts, text styling o
 
 - Font Customization: Change font family, size, and color of text.
 
-- Text Styling: Apply text styles such as bold, italic, underline, strike-through, Bullet Points and Number list.
+- Text Styling: Apply text styles such as bold, italic, underline, strike-through, Bullet Points and Number list, framing
 
 - Text Alignment: Align text to the left, center, or right.
 
@@ -22,8 +22,54 @@ is a basic text editor with tabbed interface, customizable fonts, text styling o
 
 - Spell Check: You can check all the texts for mis spelled words and if it finds one , just right click and it will bring up options to choose from 
 
-And if you want you can highlight specifc Text or sentence and only change the hilghted text 
- 
+## Speach to text : Use prebuilt in commands :
+Bold - Applies bold formatting to the selected text.
+
+Italic - Toggles italic formatting for the selected text (assumes _toggle_italic method implementation).
+
+Load File - Opens a file dialog to load a text file into the text area.
+
+Underline - Toggles underline formatting for the selected text (assumes _toggle_underline method implementation).
+
+Strike - Toggles strikethrough formatting for the selected text (assumes _toggle_strike method implementation).
+
+Highlight <keyword> - Highlights all occurrences of the specified keyword in the text area.
+
+Clear Highlight - Removes all existing highlights from the text area.
+
+Align Left - Aligns text to the left (assumes _align_left method implementation).
+
+Align Center - Aligns text to the center (assumes _align_center method implementation).
+
+Align Right - Aligns text to the right (assumes _align_right method implementation).
+
+Insert Text - If no specific command is recognized, the spoken text is inserted as plain text into the text area.
+
+## Code Execution 
+just type out your code and click run (only works with Python) and nott terminal base games 
+
+## Terminal Widget 
+you should be able to use all basic windwo command like 
+- dir
+- time /t
+- date /t
+and so on
+
+if u want to customize backgroun and texk of termnial juts use these commands 
+- set bgcolor blue
+- set fgcolor red
+
+list of colors for terminal:
+- red
+- blue
+- green
+- cyan
+- yellow
+- white
+- lime
+  and more 
+
+
 ### Keybindings
 
 | Key Combination     | Action                             |
