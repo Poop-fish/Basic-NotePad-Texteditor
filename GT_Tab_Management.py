@@ -1,5 +1,5 @@
 from GT_imports import *
-
+# from GT_Editor import 
 class TabManagement:
     def __init__(self , editor):
         self.tabs = []
@@ -17,24 +17,25 @@ class TabManagement:
         self.notebook = ttk.Notebook(root)
         self.notebook.pack(fill=tk.BOTH, expand=True)
         self._new_tab()
-
+    
     def _new_tab(self):
         frame = tk.Frame(self.notebook, bg=self.bg)
 
-        line_numbers = tk.Text(frame, width=4, bg="gray", fg="black", state="disabled")
+        line_numbers = tk.Text(frame, width=4, bg="#444444", fg="black", state="disabled")
         line_numbers.pack(side=tk.LEFT, fill=tk.Y)
 
         text_area = tk.Text(frame, font=self.default_font, wrap="word", bg=self.bg, fg=self.fg, undo=True)
-
         text_area.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-
+        
         scrollbar = ttk.Scrollbar(frame, command=text_area.yview)
         text_area.configure(yscrollcommand=lambda *args: self._on_scroll(line_numbers, text_area, *args))
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 
         self._update_line_numbers(line_numbers, text_area)
+        
         text_area.bind("<KeyRelease>", lambda event: self._update_line_numbers(line_numbers, text_area))
         text_area.bind("<MouseWheel>", lambda event: self._update_line_numbers(line_numbers, text_area))
+        text_area.bind_all("<KeyRelease>", self._dynamic_word_count)
 
         self.notebook.add(frame, text=f"Tab {len(self.tabs) + 1}")
         self.tabs.append(text_area)
