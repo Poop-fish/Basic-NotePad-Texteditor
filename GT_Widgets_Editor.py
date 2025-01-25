@@ -275,18 +275,31 @@ class Font_Text_Editor:
 
 #! ------------------------------------------------------------------------------------------------
     
+   
     def _speech_to_text(self):
         recognizer = sr.Recognizer()
 
+        popup = tk.Toplevel()
+        popup.title("Speech-to-Text")
+        popup.geometry("300x150")
+        popup_label = tk.Label(popup, text="Listening...\nSpeak now.", font=("Helvetica", 12), fg="green", wraplength=280)
+        popup_label.pack(expand=True, fill=tk.BOTH)
+
+        popup.update() 
+
         with sr.Microphone() as source:
-            recognizer.adjust_for_ambient_noise(source)  # Reduce noise
-            print("Listening... Speak now.")
+            recognizer.adjust_for_ambient_noise(source)
             try:
                 audio = recognizer.listen(source)
+                popup_label.config(text="Processing...") 
+                popup.update()
+
                 command = recognizer.recognize_google(audio).lower()
                 print(f"You said: {command}")
                 text_area = self._get_current_text_area()
-                
+
+                recognized = True
+
                 if "bold" in command:
                     self._apply_bold_to_highlighted_text()
                 elif "italic" in command:
@@ -295,7 +308,7 @@ class Font_Text_Editor:
                     self._load_file()
                 elif "underline" in command:
                     self._toggle_underline()
-                elif "strike" in command:
+                elif "apple" in command:
                     self._toggle_strike()
                 elif "highlight" in command:
                     keyword = command.replace("highlight", "").strip()
@@ -312,13 +325,23 @@ class Font_Text_Editor:
                 elif "align right" in command:
                     self._align_right()
                 else:
+                    recognized = False  
                     text_area.insert(tk.INSERT, command)
 
+                if recognized:
+                    popup_label.config(text=f"Recognized Command:\n'{command}'", fg="blue")
+                else:
+                    popup_label.config(text=f"Unrecognized Command:\n'{command}'", fg="red")
+
             except sr.UnknownValueError:
+                popup_label.config(text="Sorry, I could not understand what you said.", fg="orange")
                 print("Sorry, I could not understand what you said.")
             except sr.RequestError as e:
+                popup_label.config(text=f"Speech Recognition Error:\n{e}", fg="red")
                 print(f"Could not request results from Google Speech Recognition service; {e}")
-
+            finally:
+                popup.update() 
+                popup.after(2000, popup.destroy)  
     
     def _apply_bold_to_highlighted_text(self):
         text_area = self._get_current_text_area()
