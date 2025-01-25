@@ -8,7 +8,7 @@ is a basic text editor with tabbed interface, customizable fonts, text styling o
 
 - Font Customization: Change font family, size, and color of text.
 
-- Text Styling: Apply text styles such as bold, italic, underline, strike-through, Bullet Points and Number list, framing
+- Text Styling: Apply text styles such as bold, italic, underline, strike-through, Bullet Points and Number list, frame (like highlight but just a frame)
 
 - Text Alignment: Align text to the left, center, or right.
 
