@@ -295,7 +295,7 @@ class Font_Text_Editor:
                     self._load_file()
                 elif "underline" in command:
                     self._toggle_underline()
-                elif "apple" in command:
+                elif "strike" in command:
                     self._toggle_strike()
                 elif "highlight" in command:
                     keyword = command.replace("highlight", "").strip()
