@@ -1,5 +1,6 @@
 ### New stuff Added👉 Speach to text , Code execution(Python Only) , clock widget , calculator , drawing pad , terminal and more ! 
 
+
 ## GTextEditor :
 is a basic text editor with tabbed interface, customizable fonts, text styling options, and file handling capabilities. It provides a rich set of features such as font and color customization, find and replace, undo/redo, and more. This text editor is built using Python's Tkinter module for graphical user interface and is designed for simple and efficient text editing.
 
@@ -72,21 +73,7 @@ list of colors for terminal:
 
 ### Keybindings
 
-| Key Combination     | Action                             |
-|---------------------|------------------------------------|
-| **Ctrl + N**        | Open a new tab                   |
-| **Ctrl + S**        | Save as text                     |
-| **Ctrl + O**        | Load text                        |
-| **Ctrl + Q**        | Quit application                 |
-| **Ctrl + Z**        | Undo last action                 |
-| **Ctrl + Y**        | Redo last undone action          |
-| **Ctrl + F**        | Find and replace text            |
-| **Ctrl + B**        | Toggle bold formatting           |
-| **Ctrl + I**        | Toggle italic formatting         |
-| **Ctrl + U**        | Toggle underline formatting      |
-| **Ctrl + L**        | Align text to the left           |
-| **Ctrl + E**        | Center-align text                |
-| **Ctrl + R**        | Align text to the right          |
+Added a keybind pop up menu to look over keybinds in the About\Help Menu
 
 
 ## Menu \ ToolBar Options:
@@ -150,6 +137,19 @@ You can Apply my Custom style, all u need to do is add the root like this ![Scre
 
 
 ## Example.py is the file you can use to run the code or make your own file to run the widget 
+
+directory should look like this:
+
+MainFolder/
+├── Assets/          
+├── Example.py          
+├── GT_NotePad.py         
+├── GT_imports.py     
+├── GT_Style.py        
+├── GT_Tab_Management.py  
+├── GT_Widgets_Editor.py    
+├── GT_File_Operations.py  
+├── GT_Menu_Toolbar_Management.py  
 
 # License 
 This is open-source and can be used and modified freely
