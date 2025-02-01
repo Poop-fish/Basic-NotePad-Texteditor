@@ -49,7 +49,7 @@ Align Right - Aligns text to the right (assumes _align_right method implementati
 Insert Text - If no specific command is recognized, the spoken text is inserted as plain text into the text area.
 
 ## Code Execution 
-just type out your code and click run (only works with Python) and not terminal base games beacuse as of right now any code that promts u to type in output terminal will crash the app. i.e a termnal calcultor or number guessing game using the terminal and so on but it will run full python code like making a app with tkinter and so on\ i have made a mini pygame window with a object moving in it so you can make stuff you the code executer 
+just type out your code and click run (only works with Python) and not terminal base games beacuse as of right now any code that promts u to type in output terminal will crash the app. i.e a termnal calcultor or number guessing game using the terminal and so on but it will run full python code like making a app with tkinter and so on\ i have made a mini pygame window with a object moving in it so you can make stuff.
 
 ## Terminal Widget 
 you should be able to use all basic window commands like 
