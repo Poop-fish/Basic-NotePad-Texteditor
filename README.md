@@ -26,7 +26,7 @@ is a basic text editor with tabbed interface, customizable fonts, text styling o
 - drawing window: you can open up and draw in a window , right click to bring up context menu if you want to change color , clear and/or save the drawing ypu made
 
 ## Speach to text : prebuilt commands :
-Bold - Applies bold formatting to the selected text(select the text fist then so the command , it will use the commond on every letter if you dont 
+Bold - Applies bold formatting to the selected text(select the text first then say the command , it will use the commond on every letter if you dont 
 
 Italic - Toggles italic formatting for the selected text (assumes _toggle_italic method implementation).
 
